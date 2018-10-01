@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Primera Web</title>
+    </head>
+    <body>
+        <!-- Esto es un comentario -->
+        <pre>
+            Esta es 
+            una frase con ñ &ntilde; &napprox; &nang; &#169 &#174 &#928 &#9829
+        </pre>
+        
+        <!-- Párrafos -->
+        <p>
+            Primer <br /> Párrafo
+        </p>
+        <p style="font-weight: bold; font-style: italic">
+            Segundo Párrafo
+        </p>
+        
+        <!-- Encabezados -->
+        <h1>El más Grande</h1>
+        <h6>El más Pequeño</h6>
+
+        <!-- Línea Horizontal -->
+        <hr />
+
+        <!-- Elementos de Marcado -->
+        <abbr title="Administración de Sistemas Informáticos en Red">ASIR</abbr>
+
+        <!-- Párrafos Avanzados -->
+        <blockquote style="background: gray">
+            <span style="font-weight: bold">Tema 1</span>
+            <p>Este es el tema <del>1</del><ins>2</ins> del libro</p>
+        </blockquote>
+
+        <!-- Listas -->
+        <ul style="list-style-type: initial">
+            Lista de Objetos
+            <li>Mesa</li>
+            <li>Silla</li>
+            <li>Ordenador</li>
+        </ul>
+
+        <ol>
+            Lista de Objetos
+            <li>Mesa</li>
+            <li>Silla</li>
+            <li>Ordenador</li>
+        </ol>
+
+        <ol>
+            Lista de Objetos
+            <li>Mesa
+                <ul>
+                    <li>Blanca</li>
+                    <li>Marrón</li>
+                    <li>Azul</li>
+                </ul>
+            </li>
+            <li>Silla</li>
+            <li>Ordenador</li>
+        </ol>
+
+        <dl>
+            <dt>Ordenador</dt>
+            <dd>Elemento que hace muchas cosas</dd>
+            <dt>Programador</dt>
+            <dd>Personaje que utiliza el ordenador para muchas cosas</dd>
+        </dl>
+    </body>
+</html>
