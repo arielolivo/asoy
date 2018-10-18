@@ -6,21 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tabla comparativa</title>
     <style type="text/css">
-        table, td, th {border:2px solid black; border-collapse:collapse; padding:10px; text-align:center;}
+      #tab1
+       {border:2px solid black; border-collapse:collapse; padding:5px; text-align:center;}
+       .bordex{
+            border: 1px solid black;border-spacing:15px;text-align:center;
+        }
         </style>
     
 </head>
 <body>
-        <table  summary="Tabla comparativa de las características técnicas de los reproductores MP3">
+        <table id="tab1">
           <caption>Tabla comparativa de las características técnicas de los reproductores MP3</caption>
           <tr>
-            <th></th>
-            <th abbr="Reproductor mini" scope="col" colspan="3">
+            <th id="tab1"></th>
+            <th id="tab1"abbr="Reproductor mini" scope="col" colspan="3">
               <img src="C:\Users\Alumno\Documents\Arielolivo/imagenes/mp3_pequeno_blanco.png" alt="Imagen del reproductor MP3 pequeño de color blanco" />
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/mp3_pequeno_negro.png" alt="Imagen del reproductor MP3 pequeño de color negro" />
               <br/><strong>MP3 mini</strong>
             </th>
-            <th abbr="Reproductor estándar" scope="col" colspan="2">
+            <th id="tab1"abbr="Reproductor estándar" scope="col" colspan="2">
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/mp3_grande_blanco.png" alt="Imagen del reproductor MP3 grande de color blanco" />
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/mp3_grande_negro.png" alt="Imagen del reproductor MP3 grande de color negro" />
               <br/><strong>MP3 grande</strong>
@@ -28,49 +32,211 @@
           </tr>
          
           <tr>
-            <th scope="row">Capacidad de almacenamiento</th>
-              <td>4GB <br/> (1.000 canciones)</td>
-              <td>8GB <br/> (2.000 canciones)</td>
-              <td>16GB <br/> (4.000 canciones)</td>
-              <td>30GB <br/> (7.500 canciones)</td>
-              <td>80GB <br/> (20.000 canciones)</td>
+            <th id="tab1"scope="row">Capacidad de almacenamiento</th>
+              <td id="tab1">4GB <br/> (1.000 canciones)</td>
+              <td id="tab1">8GB <br/> (2.000 canciones)</td>
+              <td id="tab1">16GB <br/> (4.000 canciones)</td>
+              <td id="tab1">30GB <br/> (7.500 canciones)</td>
+              <td id="tab1">80GB <br/> (20.000 canciones)</td>
             </tr>
          
-          <tr>
-            <th scope="row">Colores</th>
-            <td>
+          <tr >
+            <th id="tab1"scope="row">Colores</th>
+            <td id="tab1">
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/color_blanco.png" alt="Color blanco" />
             </td>
-            <td>
+            <td id="tab1">
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/color_negro.png" alt="Color blanco" />
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/color_verde.png" alt="Color verde" />
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/color_azul.png" alt="Color azul" />
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/color_rosa.png" alt="Color rosa" />
             </td>
-            <td>
+            <td id="tab1">
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/color_negro.png" alt="Color negro" />
             </td>
-            <td colspan="2">
+            <td id="tab1" colspan="2">
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/color_blanco.png" alt="Color blanco" />
               <img src="C:\Users\Alumno\Documents\Arielolivo\imagenes/color_negro.png" alt="Color negro" />
             </td>
           </tr>
          
           <tr>
-            <th scope="row">Pantalla</th>
-            <td colspan="3">LCD de 3 cm (diagonal) con retroiluminación</td>
-            <td colspan="2">LCD de 6 cm (diagonal) con retroiluminación</td>
+            <th id="tab1" scope="row">Pantalla</th>
+            <td id="tab1"colspan="3">LCD de 3 cm (diagonal) con retroiluminación</td>
+            <td id="tab1"colspan="2">LCD de 6 cm (diagonal) con retroiluminación</td>
+          </tr>
+         
+          <tr >
+            <th id="tab1"rowspan="2" scope="row">Tiempo de carga</th>
+            <td id="tab1"rowspan="2" colspan="3">Unas 3 horas</td>
+            <td id="tab1"colspan="2">Unas 4 horas</td>
           </tr>
          
           <tr>
-            <th rowspan="2" scope="row">Tiempo de carga</th>
-            <td rowspan="2" colspan="3">Unas 3 horas</td>
-            <td colspan="2">Unas 4 horas</td>
+            <td id="tab1"colspan="2">Unas 2 horas para alcanzar el 80% de la capacidad</td>
           </tr>
-         
-          <tr>
-            <td colspan="2">Unas 2 horas para alcanzar el 80% de la capacidad</td>
-          </tr>
+        </table>
+
+        <table id="tab1" summary="Horario" bordercolor = "80BD78" border="8" cellpadding="10" cellspacing="10">
+            <caption> <h1>Horario</h1></caption>
+            <tr bgcolor=80BD78>
+                <th id="tab1"></th>
+                <th id="tab1" width="80">Lunes</th>
+                <th id="tab1" width="80">Martes</th>
+                <th id="tab1"width="80">Miercoles</th>
+                <th id="tab1"width="80">Jueves</th>
+                <th id="tab1"width="80">Viernes</th>
+            </tr>
+            <tr>
+                <td id="tab1"bgcolor=80BD78>1º Hora <br/> (8:20-9:10)</td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                
+            </tr>
+        <tr>
+                <td id="tab1"bgcolor=80BD78>2º Hora <br/> (9:10-10:05)</td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+        </tr>
+        <tr>
+                <td id="tab1" bgcolor=80BD78>3º Hora <br/> (10:05-11:00)</td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+        </tr>
+        <tr>
+            <td id="tab1" colspan="6" bgcolor=E9CDD7> RECREO </td>
+        </tr>
+        <tr>
+            <td id="tab1" bgcolor=80BD78>4º Hora <br/> (11:30-12:25)</td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+        </tr>
+        <tr>
+            <td id="tab1" bgcolor=80BD78>5º Hora <br/> (12:25-13:20)</td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+                <td id="tab1"></td>
+        </tr>
+        <tr>
+            <td id="tab1"bgcolor=80BD78>6º Hora <br/> (13:20-14:10)</td>
+            <td id="tab1"></td>
+            <td id="tab1"></td>
+            <td id="tab1"></td>
+            <td id="tab1"></td>
+            <td id="tab1"></td>
+        </tr>
+    </table>
+    <br/>
+    <table summary="climas de america del sur" cellspacing="4" cellpadding="4" border="2" width=400 bgcolor=dddddd>
+        <tr>
+            <td colspan="2" bgcolor="666666" align="center"><font color="#FFFFFF"><strong>Climas de América del Sur</strong></font></td>
+        </tr>
+        <tr>
+            <td width="50%">
+                <table align="right" cellspacing="1" cellpadding="1" border="2">
+                <tr>
+                    <td bgcolor="#cccccc" align="center">Venezuela</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#cccccc" align="center">Colombia</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#cccccc" align="center">Ecuador</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#cccccc" align="center">Perú</td>
+                </tr>
+                </table>
+                Parte de arriba de América del Sur. Países como:
+            </td>
+            <td width="50%">
+                <table align="right" cellspacing="1" cellpadding="1" border="2">
+                <tr>
+                    <td bgcolor="#cccccc" align="center">Argentina</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#cccccc" align="center">Chile</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#cccccc" align="center">Uruguay</td>
+                </tr>
+                <tr>
+                    <td bgcolor="#cccccc" align="center">Paraguay</td>
+                </tr>
+                </table>
+                Parte de abajo de América del Sur. Países como:
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#358391">Bosque tropical, clima de sabana, clima marítimo con inviernos secos.</td>
+            <td bgcolor="#358391">Climas marítimos con veranos secos, con inviernos secos, climas frios, clima de estepa, clima desértico.</td>
+        </tr>
+      </table>
+      <br/> 
+        <table summary="tabla 4">
+            <caption><strong>Propiedad empty-cells y caption side</strong></caption>
+            <tr> 
+                <th ></th>
+                <td class="bordex" bgcolor="#FCF3CF" style="color:#7B241C"><b>columna 1</b></td>
+                <td class="bordex"bgcolor="#FCF3CF" style="color:#7B241C"><b>columna 2</b></td>
+                <td class="bordex" bgcolor="#FCF3CF" style="color:#7B241C"><b>columna 3</b></td>
+                <td class="bordex"bgcolor="#FCF3CF" style="color:#7B241C"><b>columna 4</b></td>
+                <td class="bordex"bgcolor="#FCF3CF" style="color:#7B241C"><b>columna 5</b></td>
+            </b>
+            </tr>
+            <tr>
+                <td class="bordex" width="15%" bgcolor="#FCF3CF" style="color:#7B241C"><b>fila 1</b></td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6"> celda 1,1</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 1,2</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 1.3</td>
+                <th></th>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 1,5</td>
+            </tr>
+            <tr>
+                <td class="bordex"bgcolor="#FCF3CF" style="color:#7B241C"><b>fila 2</b></td>
+                <th></th>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 2,2</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 2,3</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 2,4</td>
+                <th></th>
+            </tr>
+            <tr>
+                <td class="bordex"bgcolor="#FCF3CF" style="color:#7B241C"><b>fila 3</b></td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 3,1</td>
+                <th></th>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6" >celda 3,3</td>
+                <td class="bordex"bgcolor="#D6EAF8"style="color:#2874A6" >celda 3,4</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 3,5</td>
+            </tr>
+            <tr>
+                <td class="bordex"bgcolor="#FCF3CF" style="color:#7B241C"><b>fila 4</b></td>
+                <th></th>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 4,2</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 4,4</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 4,5</td>
+            </tr>
+            <tr>
+                <td class="bordex"bgcolor="#FCF3CF" style="color:#7B241C"><b> fila 5</b></td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 5,1</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 5,2</td>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 5,3</td>
+                <th></th>
+                <td class="bordex"bgcolor="#D6EAF8" style="color:#2874A6">celda 5,5</td>
+            </tr>
         </table>
               
           </body>
