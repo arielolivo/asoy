@@ -11,6 +11,14 @@
        .bordex{
             border: 1px solid black;border-spacing:15px;text-align:center;
         }
+        .tab4{caption-side:top;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 10px
+        }
+
+        
+        
         </style>
     
 </head>
@@ -76,7 +84,6 @@
             <td id="tab1"colspan="2">Unas 2 horas para alcanzar el 80% de la capacidad</td>
           </tr>
         </table>
-
         <table id="tab1" summary="Horario" bordercolor = "80BD78" border="8" cellpadding="10" cellspacing="10">
             <caption> <h1>Horario</h1></caption>
             <tr bgcolor=80BD78>
@@ -187,8 +194,8 @@
         </tr>
       </table>
       <br/> 
-        <table summary="tabla 4">
-            <caption><strong>Propiedad empty-cells y caption side</strong></caption>
+        <table style="empty-cells:hide; border-collapse:separate;border-spacing:10px" summary="tabla 4">
+            <caption class="tab4">Propiedad empty-cells y caption side</caption>
             <tr> 
                 <th ></th>
                 <td class="bordex" bgcolor="#FCF3CF" style="color:#7B241C"><b>columna 1</b></td>
