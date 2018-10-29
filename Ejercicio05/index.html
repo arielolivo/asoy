@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    
+</head>
+<body>
+    <form action="gestiondatos.jsp" method="POST">
+       <label for="Nombre">Nombre: </label> <input type="text" value=""  id="Nombre" name="Nombre" placeholder="Nombre de usario" maxlength="10">
+        <br/><br/>
+        Contraseña: <input type="password" name="pass">
+        <br/> <br>
+        <label for="pregunta"> Alumno?</label>
+        <input type="radio" name="pregunta" id="pregunta" value="S" checked="checked" >SI
+        <input type="radio" name="pregunta" id="pregunta" value="N" >No
+        <br>
+        Aficiones:
+        <input type="checkbox" name="futbol" value="f"/> futbol
+        <input type="checkbox" name="Cine" value="C"/> Cine
+        <br/>
+        <label for="provincia">Provincia</label>
+        <select name="provincia" id="provincia">
+        <optgroup> <label for="uno"></label>
+        <option value="se">Sevilla</option>
+    </optgroup>
+        <optgroup><label for="dos"></label>
+        <option value="Ca">Cadiz</option>
+        <option value="Hu"> Huelva</option>
+     </optgroup>
+    </select>
+    <br/>
+
+
+
+          <br/>
+        <input type="Reset" value="Borrar">
+        <br/>
+        <input type="button" name="boton" value="Pulsar">
+        <br/>
+        <input type="submit" value="Enviar">
+    
+    </form>
+</body>
+</html>
