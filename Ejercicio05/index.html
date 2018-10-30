@@ -1,47 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formulario</title>
-    
-</head>
-<body>
-    <form action="gestiondatos.jsp" method="POST">
-       <label for="Nombre">Nombre: </label> <input type="text" value=""  id="Nombre" name="Nombre" placeholder="Nombre de usario" maxlength="10">
-        <br/><br/>
-        Contraseña: <input type="password" name="pass">
-        <br/> <br>
-        <label for="pregunta"> Alumno?</label>
-        <input type="radio" name="pregunta" id="pregunta" value="S" checked="checked" >SI
-        <input type="radio" name="pregunta" id="pregunta" value="N" >No
-        <br>
-        Aficiones:
-        <input type="checkbox" name="futbol" value="f"/> futbol
-        <input type="checkbox" name="Cine" value="C"/> Cine
-        <br/>
-        <label for="provincia">Provincia</label>
-        <select name="provincia" id="provincia">
-        <optgroup> <label for="uno"></label>
-        <option value="se">Sevilla</option>
-    </optgroup>
-        <optgroup><label for="dos"></label>
-        <option value="Ca">Cadiz</option>
-        <option value="Hu"> Huelva</option>
-     </optgroup>
-    </select>
-    <br/>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formularios</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form action="gestiondatos.jsp" method="GET">
+            <fieldset>
+                <legend>Datos Usuario</legend>
+                <label for="nombre">Nombre de Usuario:</label><input type="text"
+                    value="" name="nombre" id="nombre" placeholder="Nombre de
+                    Usuario"
+                    size="100" maxlength="20" pattern="[A-Z]{5}[0-9]{3}" />
+
+                <input type="password" name="pass" />
+
+                <label for="pregunta">Alumno?</label>
+                <input type="radio" name="pregunta" id="pregunta"
+                    value="S"
+                    checked="checked" />Sí
+                <input type="radio" name="pregunta" id="pregunta"
+                    value="N"
+                    />No
+
+                <label>Aficiones</label>
+                <input type="checkbox" name="futbol" value="f" />Fútbol
+
+                <input type="checkbox" name="cine" value="c" />Cine
 
 
+                <label for="provincias">Provincias</label>
+                <select name="provincias" id="provincias">
+                    <optgroup label="Unos">
+                        <option value="SE">Sevilla</option>
+                    </optgroup>
+                    <optgroup label="Dos">
+                        <option value="CA">Cádiz</option>
+                        <option value="HU">Huelva</option>
+                    </optgroup>
+                </select>
 
-          <br/>
-        <input type="Reset" value="Borrar">
-        <br/>
-        <input type="button" name="boton" value="Pulsar">
-        <br/>
-        <input type="submit" value="Enviar">
-    
-    </form>
-</body>
-</html>
+
+                <input type="file" name="archivo" />
+
+
+                <textarea name="descripcion"
+                    rows="10" cols="50"
+                    maxlength="20">
+
+                </textarea>
+
+
+                <input type="button"
+                    name="boton" value="Pulsar"
+                    />
+
+                <input type="reset"
+                    value="Borrar" />
+                <br/>
+                    <input type="submit"
+                        value="Enviar" />
+                </fieldset>
+
+            </form>
+
+            <form>
+                <input type="number" min="1" max="10" required="required"/>
+                <input type="email" readonly/>
+                <input type="url"/>
+                <input type="submit"/>
+                <input type="date"/>
+                <input type="time"/>
+                <input type="datetime-local"/>
+                <input type="month"/>
+                <input type="search"/>
+                <input type="tel"/>
+                <input type="range" min="1" max="100" step="2"/>
+                <input type="color"/>
+            </form>
+        </body>
+    </html>
