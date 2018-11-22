@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen html</title>
+    <style>
+    .colord{
+        background-color: yellow;
+        margin-right: 60%;
+        padding: 5px;
+        font-size: 20px
+    }
+    .alineacion{
+        text-align: center;
+        margin: 10px;
+        color: orange
+    }
+.otrod{
+    margin-right: 60%
+}
+.ima{
+    float: left;
+}
+table{margin-top: 5%}
+
+.flama{margin-top: 15%}
+    </style>
+</head>
+<body>
+<em>Texto Enfatizado</em><br>
+<b>Texto en Negrita</b><br>
+<em>Texto definicion</em><br>
+<code>Texto codigo fuente de ordenador</code><br>
+<samp>Texto ejemplo de codigo fuente de ordenador</samp><br>
+<kbd>Texto de teclado</kbd><br>
+<var>Variable</var><br>
+En esta linea se muestra un <strike> texto tachado</strike> y se simula <u>una correccion</u><br>
+<cite>Esta es una cita Cita</cite><br>
+<big>Este texto mas grande</big> <small>y este texto mas grande</small><br>
+En esta linea tenemos <sup>Textos en superindice </sup> y <sub> textos en subindice</sub>
+    
+
+    <div class="colord">
+        <h2 class="alineacion" >Listas de enlaces</h2>
+<ul>       
+ <li >Buscadores:
+ <ul>
+    <li><p><a href="https://www.bing.com/?setlang=es" target="_blank" style="color:purple">Bing</a></p>
+    <li><p><a href="https://www.google.es/" target="_blank" style="color: green">Google</a></p>
+ </ul> 
+</ul>
+<ul>  
+   <li>Redes sociales
+ <ul>
+    <li><p><a href="https://www.facebook.com/" target="_blank" style="color:red">Facebook</a></p>
+    <li><p><a href="https://twitter.com/?lang=es" target="_blank" style="color:red">Twitter</a></p>
+ </ul>
+</ul>   
+</div>
+
+<div class="otrod">
+<h3>Encabezado a la izquierda</h3>
+<div class="flam">
+    <div class="ima">
+<p><img src="descarga.jpg" alt="imagen" title="Fernán Caballero" width="300" height="200"></p>
+<p>Fig.1 Descripcion de la imagen</p>
+</div>
+<p> La musica es, segun la definicion tradicional del termino, el arte de organizar sensible
+    y logicamente una combinacion coherente de sonidos y silencios utilizando los principios fundamentales 
+    de la melodia, la armonia y el ritmo, mediante la intervencion de complejos procesos psico-animicos.
+</p>
+</div>
+</div>
+<br> <br> <br> <br>
+<table class="ta">
+    <tr>
+<td><label for="Asunto">Asunto:</label></td>
+<td> <input type="text"></td>
+   </tr>
+<tr>
+<td> <label for="Papellido">Primer Apellido</label></td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td> <label for="SeApellido">Segundo Apellido</label></td>
+<td><input type="text"> </td>
+</tr>
+<tr>
+<td> <label for="Nombre">Nombre</label></td>
+<td><input type="text"></td>
+</tr>
+<tr>
+<td> <label for="DNI">D.N.I / Pasaporte / N.I.E</label></td>
+<td><input type="text" pattern="[A-Z]{1}[0-9]{8}"></td>
+</tr>
+<tr>
+<td> <label for="correo">Correo electronico: </label></td>
+<td><input type="email"></td>
+</tr>
+<tr>
+<td> <label for="Telefono">Telefono: </label></td>
+<td><input type="tel" maxlength="9"></td>
+</tr>
+<tr>
+<td> <label for="Sobre que">¿Sobre que?: </label></td>
+<td> <select name="provincias" id="provincias">
+        <optgroup label="Unos">
+            <option value="SE">opciones</option>
+        </optgroup>
+        <optgroup label="Dos">
+            <option value="CA">Cádiz</option>
+            <option value="HU">Huelva</option>
+        </optgroup>
+    </select>
+</td>
+</tr>
+<tr>
+<td><label for="que va">¿Que va a escribir?</label></td>
+<td> <select name="provincias" id="provincias">
+        <optgroup label="Unos">
+            <option value="SE">opciones</option>
+        </optgroup>
+        <optgroup label="Dos">
+            <option value="CA">Cádiz</option>
+            <option value="HU">Huelva</option>
+        </optgroup>
+    </select>
+</td>
+
+</tr>
+<tr>
+<td> <label for="tex">Texto del escritorio</label></td>
+<td><textarea name="descripcion"
+    rows="5" cols="30"
+    maxlength="20" >
+
+</textarea></td>
+</tr>
+<tr>
+   <td>
+Los datos personales facilitados son 
+</td>
+<td>susceptibles de cesion cuando esta sea precisa
+        para tramitar su contestacion.</td>
+</tr>
+<tr><td> <input type="submit" value="Enviar" /></td>
+<td></td>
+    </tr>
+</table>
+</table>
+</body>
+</html>
