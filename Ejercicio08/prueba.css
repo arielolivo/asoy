@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font: bold 20px verdana, sans-serif;
+}
+
+h2 {
+    font: bold 16px verdana, sans-serif;
+}
+
+header, section, footer, aside, nav, article {
+    display: block;
+}
+
+body {
+    background-color: #FCF3CF
+}
+
+
+
+#cabecera {
+    border: 1px solid #999999;
+    background: #A9DFBF;
+    padding: 30px;
+    padding-bottom: 50px
+    
+}
+#cabecera h1{
+    color:#C0392B  
+}
+#cabecera p{
+    color: #17A589;
+}
+
+#cabecera img{
+    float: left;
+    margin-left: 5px;
+    margin-right: 50px;
+   
+}
+
+
+
+#menu {
+    background: #5DADE2;
+}
+
+#menu li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+    border-right: 2px solid #1F618D
+}
+
+
+
+#seccion {
+    float: left;
+    width: 660px;
+    margin: 20px;
+}
+
+#columna {
+    float: left;
+    width: 220px;
+    margin: 20px 0px;
+    background: #cccccc;
+    border: 2px solid #999999
+}
+
+
+article {
+    
+    background: #EDBB99;
+}
+article div{
+    border-radius: 20px 20px 20px 20px;
+    height: 350px;
+    width: 100%;
+    background-color: #DC7633
+}
+article header {
+    background-color: #E59866;
+    padding: 10px;
+    color: #2980B9
+}
+article h2{
+    padding: 20px 0PX 20px 0px;
+    font-size: 30px;
+    color: #2980B9
+  }
+
+  aside img{
+      height: 30px;
+      width: 30px;
+      padding: 5px
+  }
+blockquote{
+    background: #999999
+}
