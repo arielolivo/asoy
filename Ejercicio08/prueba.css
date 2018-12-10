@@ -93,11 +93,38 @@ article h2{
     color: #2980B9
   }
 
-  aside img{
+  .imagen{
       height: 30px;
       width: 30px;
       padding: 5px
   }
+  
+  .imagen2{
+height: 300px;
+width: 300px;
+margin-left: -40px;
+margin-top: 10px; 
+  }
+
 blockquote{
     background: #999999
+}
+aside header{
+    padding: 5px
+}
+.sig{
+    background-color: #A4A3A3;
+    color: #626567
+}
+.Curso{
+    background-color: #A4A3A3;
+    color: #626567;
+    padding: 5px
+}
+aside div li {
+    padding: 4px;
+    margin-left: 20px
+}
+footer{
+    padding: 10px
 }
