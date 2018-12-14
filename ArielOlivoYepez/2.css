@@ -1,0 +1,14 @@
+h1, samp, p {
+    font-weight: bold
+}
+#primera{
+background-color: blue
+}
+div p{
+    font-style: italic
+}
+.bloque{
+    font-weight: bold;
+}
+ P:first-letter {
+ font-size: 200%;}

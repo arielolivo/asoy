@@ -15,24 +15,25 @@ header, section, footer, aside, nav, article {
     display: block;
 }
 
-body {
-    background-color: #FCF3CF
-}
+
 
 
 
 #cabecera {
-    border: 1px solid #999999;
-    background: #A9DFBF;
-    padding: 30px;
-    padding-bottom: 50px
+    border-bottom : 2px solid #B5B4B4;
+    padding-bottom: 15px;
+   
     
 }
 #cabecera h1{
-    color:#C0392B  
+    float: left;
+    color:#4F4F4F;
+    margin-left: 50%;
+    margin-bottom: 10%
+    font-size: 50px
 }
 #cabecera p{
-    color: #17A589;
+    color: #4F4F4F;
 }
 
 #cabecera img{

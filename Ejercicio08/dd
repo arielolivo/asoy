@@ -1,0 +1,9 @@
+
+
+        <aside id="columna">
+            <blockquote>Mensaje 1</blockquote>
+        </aside>
+
+        <footer id="pie">
+            Todos los derechos reservados para IES
+        </footer>
