@@ -6,13 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Formulario2</title>
 </head>
-<body>
-    <h1>Formulario </h1>
-
+<body background="C:\Users\Alumno\Documents\Arielolivo\imagenes/fondo.jpg" >
+    
+<div style="background-color:cadetblue ; width:300px">
+    <h1>Formulario sobre el Baloncesto </h1>
     <table>
         <tr>
-            <td><label for="nombre">Nombre: </label></td> 
+            <td><label for="nombre">Nombre del equipo: </label></td> 
             <td> <input type="text"/></td>
+        </tr>
+
+        <tr>
+            <td><label for="nombre">Nombre del equipo contrincante: </label></td> 
+            <td> <input type="text"/></td>
+        </tr>
+
+
+        <tr>
+            <td><label for="contraseña">Contraseña</label></td>
+            <td> <input type="password"></td>
+        </tr>
+
+        <tr>
+            <td><label for="provincia">Equipos</label></td>
+            <td> <select name="" id="">
+            <optgroup label="Unos">
+             <option value="CA">Chicago bulls</option>
+             <option value="HU">Warriors</option>
+             <option value="SE">Celtics</option>
+             </select></td>
         </tr>
 
         <tr>
@@ -26,33 +48,21 @@
           </tr>
          
           <tr>
-    <td> <label for="Fecha">Fecha: </label></td>
+    <td> <label for="Fecha">Fecha del Partido: </label></td>
     <td> <input type="date"/></td>
         </tr>
 
         <tr>
-     <td> <label for="Tiempo">Tiempo: </label></td>
+     <td> <label for="Tiempo">Hora del partido: </label></td>
      <td> <input type="time"></td>
         </tr>
 
-        <tr>
-    <td> <label for="Fecha y Hora">Fecha y Hora: </label></td>
-    <td> <input type="datetime"></td>
-         </tr>
+     
 
-         <tr>
-    <td> <label for="Mes">Mes: </label></td>
-    <td> <input type="month"></td>
-        </tr>
 
         <tr>
-    <td> <label for="Semana">Semana: </label></td>
-    <td> <input type="week"></td>
-        </tr>
-
-        <tr>
-    <td> <label for="Numero">Numero (min-10,max 10):</label></td>
-    <td> <input type="number" name="cantidad" min="-10" max="10"></td>
+    <td> <label for="Numero">Numero de partidos ganados (min 0,max 10):</label></td>
+    <td> <input type="number" name="cantidad" min="0" max="10"></td>
         </tr>
 
         <tr>
@@ -77,5 +87,6 @@
     <td> <input type="submit" value="Enviar" /></td>
         </tr>
     </table>
+</div>
 </body>
 </html>
