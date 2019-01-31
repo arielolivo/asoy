@@ -1,0 +1,6 @@
+git pull origin master 
+es para poder actualizar de github a visualstudio en ubuntu
+
+
+>para activar el local host es /opt/lampp/lampp start
+>para desactivar el local host es /opt/lampp/lampp stop
