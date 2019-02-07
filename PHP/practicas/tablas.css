@@ -1,0 +1,10 @@
+.flama{font-size: 15px;
+    font-style: oblique;
+    border: hsl(187, 100%, 20%) 5px dashed;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    background-color: hsl(187, 100%, 40%);
+    width: auto;
+    height: auto;
+  } 
