@@ -9,16 +9,22 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <div class="flama">
-        <header>
-         Tabla del 1
-        </header>
-        <?php
-        for ($i=0; $i<=12 ; $i++) { 
-            print "<p>1 x $i = $i</p>";
+    <?php
+    $num=1;
+        while($num<=12)
+    {
+        print "<div> <p>Tabla de multiplicar del $num</p>";
+    $num2=1;
+        while($num2<=12)
+        {
+    $resultado=$num*$num2;
+        echo "<p>$num X $num2 = $resultado</p>";
+    $num2++;
         }
-    
-        ?>
-    </div>
+    print "</div>";
+    $num++;
+    }
+    ?>
+</div>
 </body>
 </html>
