@@ -1,11 +1,11 @@
 div {
     font-size: 15px;
     font-style: oblique;
-    border: hsl(187, 100%, 20%) 5px dashed;
+    border: black 5px ;
     margin: 10px;
     padding: 10px;
     float: left;
-    background-color: hsl(187, 100%, 40%);
+    background-color:#989C9C;
     width: auto;
     height: auto;
    }
