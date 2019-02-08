@@ -64,9 +64,11 @@ SELECT * FROM EMPLOYEES
 WHERE commission_pct >600;
 --21. Seleccionar los datos de los empleados ordenados por número de departamento, y
 --dentro de cada departamento ordenados por apellido.
-
+SELECT * FROM EMPLOYEES
+ORDER BY department_id, last_name;
 --22. Número y apellidos de los empleados cuyo email termine en ‘h’ y tengan un salario
 --superior a 2000.
+
 --23. Datos de los departamentos cuya localización empiece por ‘B’.
 --24. Datos de los empleados que tengan un salario superior a 200 y pertenezcan al
 --departamento número 10.
