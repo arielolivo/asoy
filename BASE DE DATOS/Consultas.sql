@@ -68,23 +68,44 @@ SELECT * FROM EMPLOYEES
 ORDER BY department_id, last_name;
 --22. Número y apellidos de los empleados cuyo email termine en ‘h’ y tengan un salario
 --superior a 2000.
-
+SELECT employee_id, last_name FROM EMPLOYEES
+WHERE email like '%h'and salary >2000;
 --23. Datos de los departamentos cuya localización empiece por ‘B’.
+SELECT * FROM DEPARTMENTS
+WHERE location_id like 'B%';
 --24. Datos de los empleados que tengan un salario superior a 200 y pertenezcan al
 --departamento número 10.
+SELECT * FROM EMPLOYEES
+where salary > 200 and department_id=10;
 --25. Mostrar los apellidos de los empleados que no tengan comisión.
+SELECT last_name FROM EMPLOYEES
+where commission_pct is NULL ;
 --26. Mostrar los apellidos de los empleados que no tengan comisión y cuyo apellido
 --empiece por ‘J’.
+SELECT last_name FROM EMPLOYEES
+where commission_pct is NULL and last_name like 'J%';
 --27. Seleccionar el apellido, salario y número de departamento de los empleados cuyo salario
 --sea mayor que 200000.
+SELECT last_name, salary, department_id FROM EMPLOYEES
+where salary>200000;
 --28. Obtener los apellidos de todos los empleados en minúscula.
+SELECT lower (last_name) FROM EMPLOYEES;
 --29. En una consulta concatena el apellido de cada empleado con su oficio.
+Select concat(last_name,job_title) from EMPLOYEES, JOBS;
 --30. Mostrar el apellido y la longitud del apellido (función LENGTH) de todos los
 --empleados, ordenados por la longitud de los apellidos de los empleados
 --descendentemente.
+Select last_name,length(last_name) from EMPLOYEES order by length(last_name) desc;
 --31. Obtener el año de contratación de todos los empleados (función TO_CHAR).
+Select TO_CHAR (hire_date) from EMPLOYEES;
 --32. Mostrar los datos de los empleados que hayan sido contratados en el año 2004.
+SELECT * FROM EMPLOYEES
+WHERE hire_date like '%04';
 --33. Mostrar los datos de los empleados que hayan sido contratados en el mes de
 --febrero de cualquier año.
+SELECT * FROM EMPLOYEES
+WHERE hire_date like '___02%'
 --34. Mostrar los datos de los empleados cuyo apellido empiece por 'S' y hayan sido
 --contratados en el año 2006.
+SELECT * FROM EMPLOYEES
+WHERE last_name='S%' AND hire_date like '%06';
