@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="tablas.css" />
     <script src="main.js"></script>
+<style>
+div {
+    font-size: 15px;
+    font-style: oblique;
+    border: black 5px solid ;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    background-color:#989C9C;
+    width: auto;
+    height: auto;
+   }
+</style>
 </head>
 <body>
     <?php
