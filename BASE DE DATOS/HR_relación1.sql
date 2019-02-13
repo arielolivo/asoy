@@ -1,3 +1,4 @@
+
 --1. Mostrar el apellido, fecha de alta y número de departamento de cada empleado.
 SELECT last_name, hire_date, department_id FROM EMPLOYEES;
 --2. Mostrar el número, nombre y localización de cada departamento.
