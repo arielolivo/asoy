@@ -45,28 +45,45 @@ from EMPLOYEES;
 
 --9.- Muestra el total de dinero ganado por el empleado desde que se incorporó a la empresa suponiendo que el salario no ha cambiado en todo ese tiempo.
 
+Select last_name, salary*(trunc(months_between(sysdate, hire_date)))
+from EMPLOYEES;
 
 --10.- Muestra con dos decimales el salario diario de cada trabajador suponiendo que los meses tienen 30 días.
 
+select last_name, round(salary/30,2) from EMPLOYEES;
 
 --11.- Muestra los empleados que tengan en su apellido al menos dos letras 'a'.
 
+
+
 --12.- Muestra los datos de los empleados cuyo apellido tenga mas de cinco letras.
 
+select last_name from EMPLOYEES
+ where length(last_name)>5;
 
 --13.- Muestra un mensaje de saludo a cada empleado con el formato 'Hola apellido_empleado'.
 
+Select concat('Hola ', last_name)
+from employees;
 
 --14.- Muestra el apellido de cada empleado junto con el nombre del mes en el que entró en la empresa.
 
+Select last_name, to_char(hire_date,'month')
+from EMPLOYEES;
 
 --15.- Muestra el apellido del primer empleado por orden alfabético.
 
+select min(last_name)
+from EMPLOYEES;
 
 --16.-. Muestra el número de directores que hay en la empresa.
 
+Select count(distinct(mgr))
+from EMPLOYEES;
 
 --17.- Muestra los empleados que llevan más de 6 años en la empresa.
 
+Select last_name from EMPLOYEES
+where months_between(sysdate,hire_date)>72;
 
 --18.- Muestra los empleados que fueron dados de alta entre el 01/03/1988 y el 30/06/1989.
