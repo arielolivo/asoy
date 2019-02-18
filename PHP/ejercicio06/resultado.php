@@ -1,5 +1,5 @@
 <?php
-    $nombre= trim(htmlspecialchars( strip_tags($_REQUEST["nombre"]), ENT_QUOTES, "UTF_8"));
+    $nombre= trim(htmlspecialchars( strip_tags($_REQUEST["nombre"]), ENT_QUOTES, "UTF-8"));
     if ($nombre !=""){
         print "<p>Su nombre es $nombre</p>";
     }
@@ -9,3 +9,5 @@
     print_r($_REQUEST);
     print_r($_FILES);
 ?>
+is numeri
+//formulario que pida la edad y si no pone un numero error
