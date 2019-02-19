@@ -54,7 +54,7 @@ select last_name, round(salary/30,2) from EMPLOYEES;
 
 --11.- Muestra los empleados que tengan en su apellido al menos dos letras 'a'.
 
-
+select last_name from employees where upper(instr(last_name,'a',1,2))<>0;
 
 --12.- Muestra los datos de los empleados cuyo apellido tenga mas de cinco letras.
 
