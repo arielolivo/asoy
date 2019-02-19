@@ -33,7 +33,7 @@ from employees;
 
         --apellidon.........salarion
 
-select rpad(last_name,15,'......'), salary
+select concat(rpad(last_name,30,'.'), salary)
 from EMPLOYEES
 order by salary ASC;
 
