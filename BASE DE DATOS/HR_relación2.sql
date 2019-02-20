@@ -74,4 +74,5 @@ Select last_name from EMPLOYEES where trunc(to_char(sysdate,'YYYY')-to_char(hire
 --18.- Muestra los empleados que fueron dados de alta entre el 01/03/1988 y el 30/06/1989.
 
 select last_name, to_char(hire_date,'DD/MM/YYYY') from employees where hire_date between to_date('01/03/2004')and to_date('30/06/2007');
+
 --le cambie la fecha porque no existen empleados desde 1988 la fecha minima de alta es 2001
