@@ -4,7 +4,9 @@
 
 --2)Consultar sólo el identificador y el nombre las siguientes tablas:
 --Pinacotecas.
+select ID_PINACOTECA, NOMBRE from PINACOTECAS;
 --Cuadros.
+
 --Pintores.
 --Mecenas.
 --Escuelas.
