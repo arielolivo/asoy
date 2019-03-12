@@ -1,5 +1,9 @@
 <?php
-  include"biblioteca.php";
-  cabecera("MI pagina php");
-  pie();
+
+    //include "biblioteca.php";
+    require("biblioteca.php");
+
+    cabecera("Mi Página");
+    pie();
+
 ?>

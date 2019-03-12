@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Formulario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
 </head>
 <body>
-    <form action="resultado.php">
-        <p><label>Nombre: </label><input type="text" name="Nombre"></p>
+    <form action="resultado.php" enctype="multipart/form-data" method="POST">
+        <p><label>Nombre: </label><input type="text" name="nombre"></p>
         <p><label>Pass: </label><input type="password" name="clave"></p>
-        <p><label>Descripcion: </label> <textarea name="descrip" cols="5" rows="5">
-            Esta es la descripcion</textarea></p>
-        <p><input type="checkbox" name="opcion" value="123">Opcion</p>
+        <p><label>Descripción: </label><textarea rows="5" cols="5" name="descrip">
+            Esta es la descripción</textarea></p>
+        <p><input type="checkbox" name="opcion" value="123">Opción</p>
         <p>
             <input type="radio" name="datos" value="66" checked>Dato1
             <input type="radio" name="datos" value="77">Dato2
         </p>
         <p>
-            <select name="selection" multiple="multiple">
+            <select name="seleccion[]" multiple="multiple">
                 <option value="1">Uno</option>
-                <option value="2">Dos</option>
+                <option value="2">Dos</opion>
             </select>
         </p>
+        <p><label>Fichero: </label><input type="file" name="fichero"></p>
         <p><input type="submit" value="Enviar"></p>
     </form>
 </body>
