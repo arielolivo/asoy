@@ -17,3 +17,4 @@ GRANT RESOURCE TO nombreusuario;
 
 //borrar tablas//
 SELECT 'DROP TABLE '||table_name||' CASCADE CONSTRAINTS;' FROM user_tables;
+ prueba
