@@ -19,7 +19,11 @@ where department_id in (select department_id from departments where department_n
 
 --4.-Mostrar todos los datos de los empleados que trabajen en un departamento cuyo nombre contenga una l.
 
-
+select * 
+from employees 
+where department_id in (select department_id 
+                        from departments 
+                        where department_name like '%l%')
 
 --5.- Muestra los empleados que ganan más que Alexander Hunold.
 
@@ -83,12 +87,24 @@ where department_id = (SELECT department_id
 
 --12.- Muestra los nombres de los departamentos en los que trabaja alguien que gane menos que Bruce Ernst.
 
-
+SELECT department_name
+FROM departments
+where department_id in (select department_id
+                    from employees
+                    where salary < (select salary
+                                    from employees 
+                                    where  first_name='Bruce' and last_name='Ernst'));
 
 --13.-Muestra todos los datos de los Programmer del Departamento 60.
 
-select * from employees where department_id=60 and (
-select job_id from jobs where job_title='Programmer')
+select * 
+from employees 
+where department_id=60 and department_id in (
+                                            select department_id 
+                                            from departments
+                                            where job_id in (SELECT job_id
+                                                            FROM jobs 
+                                                            where job_title='Programmer') )
 
 
 --14.- Obtener el sueldo medio de los empleados que trabajan en Seattle.
