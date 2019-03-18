@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ht1</title>
+</head>
+<body>
+    <form action="ht2.php" enctype="multipart/form-data" method="POST">
+        <label>Name: </label>
+        <input type="text" name="name"><br/>
+        <label>Pass: </label>
+        <input type="password" name="pass"><br/>
+        <label>Description: </label>
+        <textarea rows="5" cols="5" name="descrip">
+            This is the description
+        </textarea><br/>
+        
+        <input type="checkbox" name="option" value="123">Option<br/>
+        <!-- El checkbox sólo se envía si está marcado -->
+        
+        <input type="radio" name="data" value="66" checked>Data1
+        <input type="radio" name="data" value="77">Data2
+        <br/>
+        
+        <select name="select" multiple="multiple">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+        </select><br/>
+        
+        <label>File: </label>
+        <input type="file" name="file" multiple><br/>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
