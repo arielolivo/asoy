@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>formulario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</style>
+</head>
+<body style="padding: 100px">
+<form action="calculo.php">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Base del rectangulo</label>
+    <input type="text" class="form-control" name="base" id="base">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Altura del rectangulo</label>
+    <input type="text" class="form-control"name="altura" id="altura">
+  </div>
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" id="radio" value="1" checked>
+            <label class="form-check-label" for="radio1">
+              Area
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" id="radio" value="2">
+            <label class="form-check-label" for="radio2">
+              Perimetro
+            </label>
+          </div>
+        <br>
+          <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-2">Calcular</button>
+            </div>
+          </div>
+</form>
+</body>
+</html>
