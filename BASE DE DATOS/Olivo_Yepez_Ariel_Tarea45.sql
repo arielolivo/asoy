@@ -70,4 +70,23 @@ where e.department_id in (select department_id
                         having avg(salary)>(select avg(salary)
                                             from employees))
 
---10. Para cada departamento que tenga 3 o más trabajadores, calcular el total de salarios, el total de comisiones y el número de trabajadores. Mostrar el nombre del departamento y las 3 cantidades.
+--10. Para cada departamento que tenga 3 o más trabajadores,
+-- calcular el total de salarios, el total de comisiones y 
+--el número de trabajadores. Mostrar el nombre del departamento y las 3 cantidades.
+
+select d.department_name, count(e.employee_id) as num_empleados,sum(e.commission_pct)as comision_total, sum(e.salary)as salario_total
+from employees e inner join 
+departments d on e.department_id = d.department_id
+GROUP BY d.department_name
+having count(e.employee_id)>=3
+
+
+--contar la suma del sueldo y de los empleados por pais para pais que tenga al mennos 1 empleado
+
+select c.country_name, count(e.employee_id) as num_empleados, sum(e.salary)as salario_total 
+from employees e inner join 
+departments d on e.department_id = d.department_id
+inner join locations l on d.location_id=l.location_id
+inner join countries c on l.country_id=c.country_id
+GROUP BY c.country_name
+having count(e.employee_id)>=1
