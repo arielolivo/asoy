@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <?php
-            $conexion = mysqli_connect("localhost", "root", "root", "cursophp") 
+            $conexion = mysqli_connect("localhost", "root", "", "cursophp") 
             or die("Problemas con la conexión");
             $registros = mysqli_query($conexion, 
             "SELECT alu.idAlumno, alu.nombre, alu.mail, cur.nombreCurso 
