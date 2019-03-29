@@ -11,34 +11,49 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+.boton{
+  width:200px;
+height:200px;
+margin: 10px;
+}
+</style>
 </head>
 <body>
 <div class="container">
     <br>
-    <form>
-  <div class="form-group row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-    </div>
+    <form >
+    <div class="form-group">
+  <label for="example-date-input" class="col-2 col-form-label">Fecha desde</label>
+  <div class="col-5">
+    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
   </div>
-  <div class="form-group row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-    </div>
+  <label for="example-date-input" class="col-2 col-form-label">Fecha hasta</label>
+  <div class="col-5">
+    <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
   </div>
-  <div class="form-group row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-    </div>
-    <div class="form-group row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">Valor Medida</label>
-    <div class="col-sm-10">
-      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-    </div>
-</div>  
+  <label class="col-2 col-form-label" for="inlineFormCustomSelect">Tipo de medida</label>
+  <div class="col-5">
+  <select class="form-control" id="inlineFormCustomSelect">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  </div>
+  <label for="example-text-input" class="col-2 col-form-label">Valor medida</label>
+  <div class="col-5">
+    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+  </div>
+  <div style="position:absolute; top:53px; left:700px;">
+  <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"style="width:276px;
+height:276px;
+margin: 10px;">
+  Enviar
+</button>
+</div>
+</div> 
+
  
 </form>
 
@@ -64,7 +79,7 @@
             echo "</table>";
         mysqli_close($conexion);
     ?>
-      <button class="btn btn-primary" type="submit">Submit form</button>
+      <button class="btn btn-primary" type="submit">Reestablecer</button>
 </form>
 </div>
 </body>
