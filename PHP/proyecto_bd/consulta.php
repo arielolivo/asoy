@@ -15,9 +15,6 @@
 <script src="https://demos.jquerymobile.com/1.4.2/js/jquery.js"></script>
 	<script src="https://demos.jquerymobile.com/1.4.2/js/jquery.mobile-1.4.2.min.js"></script>
 <style>
-form  {
-    margin: 60px 0 0 0 !important;
- }
  
 .ui-slider .ui-btn-inner {
     padding: 2px 0 0 0 !important;
@@ -63,13 +60,13 @@ margin: 10px;
     <option value="3">Three</option>
   </select>
   </div>
-  <div data-role="rangeslider" for="example-text-input" class="col-4 col-form-label">
+  <div data-role="rangeslider" for="example-text-input" class="col-5 col-form-label">
         <label for="range-1a">Valor medida</label>
         <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40" data-popup-enabled="true" data-show-value="true">
         <label for="range-1b">Rangeslider:</label>
         <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80" data-popup-enabled="true" data-show-value="true">
     </div>
-  <div style="position:absolute; top:100px; left:700px;">
+  <div style="position:absolute; top:60px; left:800px;">
   <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"style="width:276px;
 height:276px;
 margin: 10px;">
