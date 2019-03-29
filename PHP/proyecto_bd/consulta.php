@@ -11,12 +11,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.2/css/themes/default/jquery.mobile-1.4.2.min.css">  
+<link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.2/css/themes/default/jquery.mobile-1.4.2.min.css">  
 <script src="https://demos.jquerymobile.com/1.4.2/js/jquery.js"></script>
 	<script src="https://demos.jquerymobile.com/1.4.2/js/jquery.mobile-1.4.2.min.js"></script>
 <style>
  
-.ui-slider .ui-btn-inner {
+ .ui-slider .ui-btn-inner {
     padding: 2px 0 0 0 !important;
 }
  
@@ -79,10 +79,10 @@ margin: 10px;">
 </form>
 
     <?php
-        $conexion= mysqli_connect("localhost","root","","estacion")
+        $conexion= mysqli_connect("localhost","root","","ESTACION")
             or die("Problemas de conexion");
         $registros=mysqli_query($conexion,"select Codigo, Marca, Modelo, IP, Modo_de_conexion, Ubicacion
-                                            from estaciones")
+                                            from Estaciones")
             or die("Problemas en el select".mysqli_error($conexion));
             echo "<br>";
             echo "<table class='table table-striped'>";
@@ -100,7 +100,26 @@ margin: 10px;">
             echo "</table>";
         mysqli_close($conexion);
     ?>
-      <button class="btn btn-primary" type="submit">Reestablecer</button>
+      <button data-toggle="modal" data-target="#exampleModal" class="btn btn-primary" type="submit">Reestablecer</button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </form>
 </div>
 </body>
