@@ -10,13 +10,35 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.2/css/themes/default/jquery.mobile-1.4.2.min.css">  
+<script src="https://demos.jquerymobile.com/1.4.2/js/jquery.js"></script>
+	<script src="https://demos.jquerymobile.com/1.4.2/js/jquery.mobile-1.4.2.min.js"></script>
 <style>
+form  {
+    margin: 60px 0 0 0 !important;
+ }
+ 
+.ui-slider .ui-btn-inner {
+    padding: 2px 0 0 0 !important;
+}
+ 
+.ui-slider-popup {
+    position: absolute !important;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    font-size: 36px;
+    padding-top: 10px;
+    z-index: 100;
+    opacity: 0.8;
+}
 .boton{
   width:200px;
 height:200px;
 margin: 10px;
 }
+
 </style>
 </head>
 <body>
@@ -41,11 +63,13 @@ margin: 10px;
     <option value="3">Three</option>
   </select>
   </div>
-  <label for="example-text-input" class="col-2 col-form-label">Valor medida</label>
-  <div class="col-5">
-    <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-  </div>
-  <div style="position:absolute; top:53px; left:700px;">
+  <div data-role="rangeslider" for="example-text-input" class="col-4 col-form-label">
+        <label for="range-1a">Valor medida</label>
+        <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40" data-popup-enabled="true" data-show-value="true">
+        <label for="range-1b">Rangeslider:</label>
+        <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80" data-popup-enabled="true" data-show-value="true">
+    </div>
+  <div style="position:absolute; top:100px; left:700px;">
   <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"style="width:276px;
 height:276px;
 margin: 10px;">
