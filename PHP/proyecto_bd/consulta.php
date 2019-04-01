@@ -74,7 +74,13 @@ margin: 10px;">
             or die("Problemas en el select".mysqli_error($conexion));
             echo "<br>";
             echo "<table class='table table-striped'>";
-            echo "<tr><th>Código</th><th>Marca</th><th>Modelo</th><th>IP</th><th>Modo de conexion</th><th>Ubicacion</th></tr>";
+            echo "<tr>
+                      <th>Fecha</th>
+                      <th>Tipo</th>
+                      <th>Valor</th>
+                      <th>Unidad Medida</th>
+                      <th>Sensor Utilizado</th>
+                   </tr>";
                 while ($reg = mysqli_fetch_array($registros)) {
                     echo "<tr>";
                         echo "<td>" . $reg['Codigo'] . "</td>";
@@ -82,13 +88,34 @@ margin: 10px;">
                         echo "<td>" . $reg['Modelo'] . "</td>";
                         echo "<td>" . $reg['IP'] . "</td>";
                         echo "<td>" . $reg['Modo_de_conexion'] . "</td>";
-                        echo "<td>" . $reg['Ubicacion'] . "</td>";
                     echo "</tr>";
                 }
             echo "</table>";
         mysqli_close($conexion);
     ?>
-      <button type="button" class="btn btn-primary btn-lg btn-block">Refrescar</button>
+
+      <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal"> Refrescar </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Se va Actualizar la pagina</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       Esta seguro de actualizar la pagina actual?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="location.reload()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
 </form>
 </div>
 </body>
