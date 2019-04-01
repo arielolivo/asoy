@@ -11,32 +11,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.2/css/themes/default/jquery.mobile-1.4.2.min.css">  
-<script src="https://demos.jquerymobile.com/1.4.2/js/jquery.js"></script>
-	<script src="https://demos.jquerymobile.com/1.4.2/js/jquery.mobile-1.4.2.min.js"></script>
-<style>
- 
-.ui-slider .ui-btn-inner {
-    padding: 2px 0 0 0 !important;
-}
- 
-.ui-slider-popup {
-    position: absolute !important;
-    width: 64px;
-    height: 64px;
-    text-align: center;
-    font-size: 36px;
-    padding-top: 10px;
-    z-index: 100;
-    opacity: 0.8;
-}
-.boton{
-  width:200px;
-height:200px;
-margin: 10px;
-}
-
-</style>
+ <!--Plugin CSS file with desired skin-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+    
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -62,9 +44,15 @@ margin: 10px;
   </div>
   <div data-role="rangeslider" for="example-text-input" class="col-5 col-form-label">
         <label for="range-1a">Valor medida</label>
-        <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40" data-popup-enabled="true" data-show-value="true">
-        <label for="range-1b">Rangeslider:</label>
-        <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80" data-popup-enabled="true" data-show-value="true">
+        <input type="text" class="js-range-slider" name="my_range" value=""
+        data-type="double"
+        data-min="0"
+        data-max="1000"
+        data-from="200"
+        data-to="500"
+        data-grid="true"
+    />
+    <script>$(".js-range-slider").ionRangeSlider({skin:"round"});</script>
     </div>
   <div style="position:absolute; top:60px; left:800px;">
   <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"style="width:276px;
