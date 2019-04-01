@@ -88,7 +88,7 @@ margin: 10px;">
             echo "</table>";
         mysqli_close($conexion);
     ?>
-      <button class="btn btn-primary" type="submit">Reestablecer</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Refrescar</button>
 </form>
 </div>
 </body>
