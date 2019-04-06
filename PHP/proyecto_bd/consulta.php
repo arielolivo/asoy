@@ -11,6 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<<<<<<< HEAD
 
  
  .ui-slider .ui-btn-inner {
@@ -34,6 +35,36 @@ margin: 10px;
 }
 
 </style>
+=======
+ <!--Plugin CSS file with desired skin-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+    
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+<!--Calendario-->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css">
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+<script type='text/javascript'>
+$(function(){
+$('.input-daterange').datepicker({
+    autoclose: true
+});
+});
+</script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
+<link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<!--Calendario-->
+>>>>>>> ddb6020339512fbae735cacc544cf97dddca6021
 </head>
 <body>
 <div class="container">
@@ -59,9 +90,15 @@ margin: 10px;
   </div>
   <div data-role="rangeslider" for="example-text-input" class="col-5 col-form-label">
         <label for="range-1a">Valor medida</label>
-        <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40" data-popup-enabled="true" data-show-value="true">
-        <label for="range-1b">Rangeslider:</label>
-        <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80" data-popup-enabled="true" data-show-value="true">
+        <input type="text" class="js-range-slider" name="my_range" value=""
+        data-type="double"
+        data-min="0"
+        data-max="1000"
+        data-from="200"
+        data-to="500"
+        data-grid="true"
+    />
+    <script>$(".js-range-slider").ionRangeSlider({skin:"round"});</script>
     </div>
   <div style="position:absolute; top:60px; left:800px;">
   <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"style="width:276px;
@@ -76,14 +113,20 @@ margin: 10px;">
 </form>
 
     <?php
-        $conexion= mysqli_connect("localhost","root","","ESTACION")
+        $conexion= mysqli_connect("localhost","root","","estacion")
             or die("Problemas de conexion");
         $registros=mysqli_query($conexion,"select Codigo, Marca, Modelo, IP, Modo_de_conexion, Ubicacion
-                                            from Estaciones")
+                                            from estaciones")
             or die("Problemas en el select".mysqli_error($conexion));
             echo "<br>";
             echo "<table class='table table-striped'>";
-            echo "<tr><th>Código</th><th>Marca</th><th>Modelo</th><th>IP</th><th>Modo de conexion</th><th>Ubicacion</th></tr>";
+            echo "<tr>
+                      <th>Fecha</th>
+                      <th>Tipo</th>
+                      <th>Valor</th>
+                      <th>Unidad Medida</th>
+                      <th>Sensor Utilizado</th>
+                   </tr>";
                 while ($reg = mysqli_fetch_array($registros)) {
                     echo "<tr>";
                         echo "<td>" . $reg['Codigo'] . "</td>";
@@ -91,28 +134,30 @@ margin: 10px;">
                         echo "<td>" . $reg['Modelo'] . "</td>";
                         echo "<td>" . $reg['IP'] . "</td>";
                         echo "<td>" . $reg['Modo_de_conexion'] . "</td>";
-                        echo "<td>" . $reg['Ubicacion'] . "</td>";
                     echo "</tr>";
                 }
             echo "</table>";
         mysqli_close($conexion);
     ?>
-      <button data-toggle="modal" data-target="#exampleModal" class="btn btn-primary" type="submit">Reestablecer</button>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+      <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal"> Refrescar </button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Se va Actualizar la pagina</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+       Esta seguro de actualizar la pagina actual?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" onclick="location.reload()">Confirm</button>
       </div>
     </div>
   </div>

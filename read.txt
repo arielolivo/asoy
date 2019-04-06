@@ -10,12 +10,13 @@ la ip de proxmox de mi debian 10.3.130.30
 
 //Crear usuario y desbloquearlo//
 
-CREATE USER nombreusuario
-IDENTIFIED BY contraseña DEFAULT TABLESPACE users;
-GRANT CONNECT TO nombreusuario;
-GRANT RESOURCE TO nombreusuario;
+CREATE USER Liga
+IDENTIFIED BY Liga DEFAULT TABLESPACE users;
+GRANT CONNECT TO Liga;
+GRANT RESOURCE TO Liga;
 
 //borrar tablas//
 SELECT 'DROP TABLE '||table_name||' CASCADE CONSTRAINTS;' FROM user_tables;
  prueba
  prueba2
+ prueba
