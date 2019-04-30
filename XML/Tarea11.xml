@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--1.- Instituto 
+ Crea un documento XML bien formado de un instituto que incluya estudiantes, profesores y trabajadores.
+-->
+
+<instituto>
+    <estudiante>
+        <id>154</id>
+        <nombre>Ariel</nombre>
+        <apellido>Olivo</apellido>
+        <dni>29548744F</dni>
+        <curso>A.S.I.R</curso>
+    </estudiante>
+
+    <profesor>
+        <id>124</id>
+        <nombre>Pepe</nombre>
+        <apellido>Martinez</apellido>
+        <curso_enseña>Lenguaje de marca</curso_enseña>
+    </profesor>
+
+    <trabajador>
+        <id>585</id>
+        <nombre>Marta</nombre>
+        <apellido>Rodrigues</apellido>
+        <sector>Limpieza</sector>
+    </trabajador>
+</instituto>
+
+<!--2.- Biblioteca 
+ Crea un documento XML bien formado sobre una biblioteca. Debe contener atributos que permitan 
+ identificar el libro y que registren si están prestados o no.
+-->
+
+<biblioteca>
+    <socio>
+        <id>20</id>
+            <nombre>Ariel</nombre>
+            <apellido>Olivo</apellido>
+            <dni>29548744F</dni>
+            <tel>65844555</tel>
+            <direccion>Calle nose #5</direccion>
+    </socio>
+
+    <pedido>
+        <id>HP1</id>
+        <nombre>Harry Potter</nombre>
+        <autor>JK. Rowling</autor>
+        <fechadepedido>20/01/2019</fechaopedido>
+        <prestado>S</prestado>
+    </pedido>
+
+</biblioteca>
+
+<!--3.- Bat 
+Crea un documento XML bien formado que contenga elementos iguales bat (bate y murciélago)
+ pero que pertenezcan a dos espacios de nombres diferentes.
+-->
+
+<cliente xmlns:bate='http://Espacio_de_nombres_XML/bate'
+         xmlns:murcielago='http://Espacio_de_nombres_XML/murcielago'>
+    <cli:numero_ID>1232654</cli:numero_ID>
+    <cli:nombre>Fulanito de Tal</cli:nombre>
+    <cli:telefono>99999999</cli:telefono>
+    <ped:pedido>
+        <ped:numero_ID>6523213</ped:numero_ID>
+        <ped:articulo>Caja de herramientas</ped:articulo>
+        <ped:precio>187,90</ped:precio>
+    </ped:pedido>
+</cli:cliente>
