@@ -36,7 +36,7 @@ SET SERVEROUTPUT ON
 DECLARE
   P_CODIGOEMP NUMBER;
 BEGIN
-  P_CODIGOEMP := NULL;
+  P_CODIGOEMP := NULL; --borrar null y escribir el codigo del empleado
 
   CODIGO(
     P_CODIGOEMP => P_CODIGOEMP
@@ -74,7 +74,7 @@ END BORRAR;
 DECLARE
   T_CODIGOEMP NUMBER;
 BEGIN
-  T_CODIGOEMP := NULL;
+  T_CODIGOEMP := NULL ;--aqui insertaria el codigo del empleado
 
   BORRAR(
     T_CODIGOEMP => T_CODIGOEMP
@@ -124,10 +124,59 @@ END;
 
 --2.-Codificar un procedimiento que reciba una cadena y la visualice al revés.
 
+CREATE OR REPLACE PROCEDURE REVES(p_cadena VARCHAR2)
+is
+	vcad_alreves VARCHAR2(80);
+BEGIN
+	FOR i IN REVERSE 1..LENGTH(p_cadena) LOOP
+		vcad_alreves := vcad_alreves || SUBSTR(p_cadena,i,1);
+	END LOOP;
+	DBMS_OUTPUT.PUT_LINE(vcad_alreves);
+END REVES;
+
+--para ejecutarlo :
+
+DECLARE
+  P_CADENA VARCHAR2(200);
+BEGIN
+  P_CADENA := 'gracias'; --aqui se pondria cualquier palabra
+
+  REVES(
+    P_CADENA => P_CADENA
+  );
+ 
+END;
+
 --3.-Escribir un procedimiento que reciba una fecha y escriba el año, en número, correspondiente a esa fecha.
 
 --4.-Realizar un procedimiento que reciba un número y muestre su tabla de multiplicar.
 
 --5.-Realizar función factorial.
+
+CREATE OR REPLACE FUNCTION FACTORIAL 
+(
+  N IN NUMBER 
+) RETURN NUMBER AS
+resultado number :=1;
+BEGIN
+for i in 1..n loop
+ resultado := resultado*i;
+end loop;
+  RETURN resultado;
+END FACTORIAL;
+
+--para ejecutarlo
+
+DECLARE
+  N NUMBER;
+  v_Return NUMBER;
+BEGIN
+  N := 3; -- aqui se pondria cualquier numero
+  v_Return := FACTORIAL(
+    N => N
+  );
+  DBMS_OUTPUT.PUT_LINE(v_return);
+
+END;
 
 --6.-Realizar función salarios pizarra.
