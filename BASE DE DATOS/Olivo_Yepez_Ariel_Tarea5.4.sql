@@ -17,30 +17,29 @@ END SALARIO;
 SET SERVEROUTPUT ON
 BEGIN
   SALARIO(); 
-END
+END;
 
 --b) Hacer un procedimiento que, reciba por teclado un código de empleado y devuelva su nombre.
 
-CREATE OR REPLACE PROCEDURE CODIGO (p_codigoemp employees.employee_id%type)
+create or replace PROCEDURE CODIGO (t_codigoemp employees.employee_id%type)
 is
   v_nombre employees.last_name%TYPE;
 begin
   select last_name into v_nombre
   from employees
-  where employee_id=p_codigoemp;
+  where employee_id=t_codigoemp;
   dbms_output.put_line('Nombre: '||v_nombre);
 END CODIGO;
 
 --para ejecutarlo seria:
-SET SERVEROUTPUT ON
 DECLARE
-  P_CODIGOEMP NUMBER;
+  T_CODIGOEMP NUMBER;
 BEGIN
-  P_CODIGOEMP := NULL; --borrar null y escribir el codigo del empleado
+  T_CODIGOEMP := 100; --borrar null y escribir el codigo del empleado
 
   CODIGO(
-    P_CODIGOEMP => P_CODIGOEMP
-  ); 
+    T_CODIGOEMP => T_CODIGOEMP
+  );
 END;
 
 --c) Crear un procedimiento que cuente el número de filas que hay en la tabla EMPLOYEES, deposite el resultado en una variable y visualiza su contenido.
