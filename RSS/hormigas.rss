@@ -1,0 +1,29 @@
+<!--Crea y valida un canal web de ejemplo, tres ítems como mínimo, sobre hormigas con la tecnología RSS 2.0.1.-->
+<?xml version="1.0" encoding="utf-8"?>
+ <rss version="2.0">
+  <channel>
+   <title>Hormigas</title>
+   <link>https://www.curiosfera.com/anatomia-comportamiento-hormigas/</link>
+   <description>Todo sobre las Hormigas</description>
+   
+   <item>
+    <title>Caracteristicas de las hormigas</title>
+    <link>https://www.curiosfera.com/anatomia-comportamiento-hormigas/#Caracteristicas_de_las_hormigas</link>
+    <description>Visita la pagina para saber todas las Caracteristicas de las hormigas</description>
+   </item>
+
+   <item>
+    <title>Que comen las hormigas</title>
+    <link>https://www.curiosfera.com/anatomia-comportamiento-hormigas/#Que_comen_las_hormigas </link>
+    <description>Visita la pagina para saber que comen las hormigas</description>
+   </item>
+
+   <item>
+    <title>Cómo se reproducen las hormigas</title>
+    <link>https://www.curiosfera.com/anatomia-comportamiento-hormigas/#Como_se_reproducen_las_hormigas</link>
+    <description>Visita la pagina para saber como se reproducen las hormigas</description>
+   </item>
+ 
+  </channel>
+  </rss>
+<!--validado en la pagina https://validator.w3.org/feed/#validate_by_uri-->

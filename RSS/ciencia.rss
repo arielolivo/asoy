@@ -1,0 +1,33 @@
+<!--Crea y valida un canal web de ejemplo, tres ítems como mínimo, sobre ciencia con la tecnología RSS 2.0.1.-->
+<?xml version="1.0" encoding="utf-8"?>
+ <rss version="2.0">
+  <channel>
+   <title>Ciencias</title>
+   <link>https://noticiasdelaciencia.com/sec/ciencia</link>
+   <description>Toda las noticias sobre la ciencia</description>
+   
+   <item>
+    <title>Desarrollan la primera variedad de cannabis legal no psicoactiva y con alto potencial medicinal</title>
+    <link>https://noticiasdelaciencia.com/art/32775/desarrollan-la-primera-variedad-de-cannabis-legal-no-psicoactiva-y-con-alto-potencial-medicinal</link>
+    <description>Investigadores de la Universitat Politècnica de València (UPV) han colaborado con la empresa valenciana Hemp Trading en el desarrollo de la primera
+     variedad de cannabis legal con alto potencial medicinal y sin componentes psicoactivos.</description>
+   </item>
+
+   <item>
+    <title>Software gratuito que permite seleccionar bacterias beneficiosas para los cultivos</title>
+    <link>https://noticiasdelaciencia.com/art/32779/software-gratuito-que-permite-seleccionar-bacterias-beneficiosas-para-los-cultivos</link>
+    <description> el software mostró ser capaz de clasificar más de 780 cepas de bacterias del género Bacillus, en base a la presencia de 84 genes 
+    clave que participan en mejorar el crecimiento de las plantas.</description>
+   </item>
+
+   <item>
+    <title>La fusión de agujeros negros</title>
+    <link>https://noticiasdelaciencia.com/art/32797/la-fusion-de-agujeros-negros</link>
+    <description> dos agujeros negros girando entre sí hasta acabar por confluir. La primera fusión de agujeros negros 
+    fue detectada en 2015 por LIGO, el Observatorio de Ondas Gravitacionales por Interferometría Láser, al identificar las 
+    ondas gravitacionales (fluctuaciones en el tejido del espacio-tiempo) creadas por la gigantesca colisión.</description>
+   </item>
+
+  </channel>
+ </rss>
+ <!--validado en la pagina https://validator.w3.org/feed/#validate_by_uri-->
